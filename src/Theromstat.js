@@ -5,7 +5,7 @@ function Thermostat() {
   this._powerSaving = true;
   this._MIN_TEMP = 10;
   this._MAX_TEMP_SAVINGS = 25;
-};
+}
 
 Thermostat.prototype.getDegrees = function() {
   return this._degrees;
