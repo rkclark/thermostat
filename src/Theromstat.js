@@ -2,7 +2,9 @@
 
 function Thermostat() {
   this._degrees = 20;
+  this._powerSaving = true;
   this._MIN_TEMP = 10;
+  this._MAX_TEMP_SAVINGS = 25;
 };
 
 Thermostat.prototype.getDegrees = function() {
@@ -13,9 +15,12 @@ Thermostat.prototype._setDegrees = function(number) {
   this._degrees = number;
 };
 
+Thermostat.prototype.switchPowerSaving = function() {
+  this._powerSaving = !(this._powerSaving);
+};
 
 Thermostat.prototype.up = function(number) {
-  var newTemp = this.getDegrees() + number;
+  var newTemp = Math.min(this.getDegrees() + number, this._MAX_TEMP_SAVINGS);
   this._setDegrees(newTemp);
 };
 
