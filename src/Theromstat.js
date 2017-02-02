@@ -17,3 +17,8 @@ Thermostat.prototype.up = function(number) {
   var newTemp = this.getDegrees() + number;
   this._setDegrees(newTemp);
 };
+
+Thermostat.prototype.down = function(number) {
+  var newTemp = this.getDegrees() - number;
+  this._setDegrees(newTemp);
+};

@@ -12,12 +12,18 @@ describe('Features', function() {
     expect(thermostat.getDegrees()).toEqual(20);
   });
 
-  // You can increase the temperature with an up function
+  // you can increase the temperature with an up function
 
   it('should increase temperature with an up function', function(){
     thermostat.up(3);
     expect(thermostat.getDegrees()).toEqual(23);
   });
 
+  // you can decrease the temperature with a down function
+
+  it('should decrease temperature with a down function', function(){
+    thermostat.down(3);
+    expect(thermostat.getDegrees()).toEqual(17);
+  });
 
 });
