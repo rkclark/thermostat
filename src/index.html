@@ -12,17 +12,20 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <div id="main-wrapper">
 
       <div id="thermostat-wrapper">
         <div class="" id="thermostat-display">
-
+          <progress value="20" max="32"></progress>
         </div>
         <div class="" id="thermostat-controls">
-          
+          <button id="temp-up" type="button">Increase Temperature</button>
+          <button id="temp-down" type="button">Decrease Temperature</button>
+          <button id="temp-reset" type="button">Reset Temperature</button>
+          <button id="switch-mode" type="button">Switch Power Saving Mode</button>
         </div>
       </div>
 
