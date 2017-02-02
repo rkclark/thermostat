@@ -17,4 +17,11 @@ describe('Thermostat', function() {
     });
   });
 
+  describe("#up", function(){
+    it('should increase temperature with an up function', function(){
+      thermostat.up(3);
+      expect(thermostat.getDegrees()).toEqual(23);
+    });    
+  });
+
 });
