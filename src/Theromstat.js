@@ -2,6 +2,7 @@
 
 function Thermostat() {
   this._degrees = 20;
+  this._MIN_TEMP = 10;
 };
 
 Thermostat.prototype.getDegrees = function() {
@@ -19,6 +20,6 @@ Thermostat.prototype.up = function(number) {
 };
 
 Thermostat.prototype.down = function(number) {
-  var newTemp = this.getDegrees() - number;
+  var newTemp = Math.max(this.getDegrees() - number, this._MIN_TEMP);
   this._setDegrees(newTemp);
 };
