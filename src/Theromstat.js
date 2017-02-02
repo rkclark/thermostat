@@ -9,6 +9,8 @@ Thermostat.MIN_TEMP = 10;
 Thermostat.MAX_TEMP_SAVINGS = 25;
 Thermostat.MAX_TEMP_FULL = 32;
 Thermostat.DEFAULT_TEMP = 20;
+Thermostat.HIGH_USAGE_LIMIT = 25;
+Thermostat.LOW_USAGE_LIMIT = 18;
 
 // PUBLIC
 
@@ -30,8 +32,18 @@ Thermostat.prototype.down = function(number) {
   this._setDegrees(newTemp);
 };
 
-Thermostat.prototype.reset = function(){
+Thermostat.prototype.reset = function() {
   this._setDegrees(Thermostat.DEFAULT_TEMP);
+};
+
+Thermostat.prototype.seeEnergyUsage = function() {
+  if (this.getDegrees() < Thermostat.LOW_USAGE_LIMIT) {
+    return 'low-usage';
+  } else if (this.getDegrees() < Thermostat.HIGH_USAGE_LIMIT) {
+    return 'medium-usage';
+  } else {
+    return 'high-usage';
+  }
 };
 
 // PRIVATE

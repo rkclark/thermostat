@@ -66,4 +66,16 @@ describe('Thermostat', function() {
     });
   });
 
+  describe("#seeEnergyUsage", function(){
+    it("should display a energey usage message", function(){
+      expect(thermostat.seeEnergyUsage()).toEqual('medium-usage');
+
+      thermostat.up(5);
+      expect(thermostat.seeEnergyUsage()).toEqual('high-usage');
+
+      thermostat.down(8);
+      expect(thermostat.seeEnergyUsage()).toEqual('low-usage');
+    });
+  });
+
 });
