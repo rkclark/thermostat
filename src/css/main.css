@@ -1,3 +1,6 @@
+html, body, #main-wrapper {
+  height: 100%; }
+
 progress {
   width: 80%;
   height: 3em; }
