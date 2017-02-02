@@ -18,6 +18,10 @@ Thermostat.prototype.getDegrees = function() {
   return this._degrees;
 };
 
+Thermostat.prototype.getInPoweringSaving = function() {
+  return this._powerSaving;
+};
+
 Thermostat.prototype.switchPowerSaving = function() {
   this._powerSaving = !(this._powerSaving);
 };

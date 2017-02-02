@@ -1,12 +1,11 @@
 $( document ).ready(function() {
-    // if temp-up is clicked, call up method, reload value
     var thermostat = new Thermostat();
+    changeValue(20);
 
     function changeValue(num) {
       $( "#progress-bar" ).attr('value', num);
+      $( "#temp-display" ).text(num);
     }
-
-    console.log("Document loaded");
 
     $( "#temp-up" ).click(function() {
       thermostat.up(1);
@@ -21,5 +20,13 @@ $( document ).ready(function() {
     $( "#temp-reset" ).click(function() {
       thermostat.reset();
       changeValue(thermostat.getDegrees());
+    });
+
+    $( "#switch-mode" ).click(function() {
+      thermostat.switchPowerSaving();
+      if ((thermostat.getDegrees() > 25) && thermostat.getInPoweringSaving()) {
+        thermostat.up(1);
+        changeValue(thermostat.getDegrees());
+      }
     });
 });
