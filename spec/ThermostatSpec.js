@@ -34,9 +34,15 @@ describe('Thermostat', function() {
       expect(thermostat.getDegrees()).toEqual(23);
     });
 
-    it('should have a limit of 25 degrees with power saving', function(){
+    it('should have a limit of 25 degrees with power saving on', function(){
       thermostat.up(6);
       expect(thermostat.getDegrees()).toEqual(25);
+    });
+
+    it("should have a limit of 32 degrees with power saving off", function(){
+      thermostat.switchPowerSaving();
+      thermostat.up(13);
+      expect(thermostat.getDegrees()).toEqual(32);
     });
   });
 
@@ -46,7 +52,7 @@ describe('Thermostat', function() {
       expect(thermostat.getDegrees()).toEqual(17);
     });
 
-    it("The minimum temperature is 10 degrees", function(){
+    it("should have a minimum temperature of 10 degrees", function(){
       thermostat.down(11);
       expect(thermostat.getDegrees()).toEqual(10);
     });

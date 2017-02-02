@@ -26,18 +26,26 @@ describe('Features', function() {
     expect(thermostat.getDegrees()).toEqual(17);
   });
 
-  // The minimum temperature is 10 degrees
+  // the minimum temperature is 10 degrees
 
-  it("The minimum temperature is 10 degrees", function(){
+  it("should have a minimum temperature of 10 degrees", function(){
     thermostat.down(11);
     expect(thermostat.getDegrees()).toEqual(10);
   });
 
-  // If power saving mode is on, the maximum temperature is 25 degrees
+  // if power saving mode is on, the maximum temperature is 25 degrees
 
   it("should have a max temp of 25 degrees if power saving mode is on", function(){
     thermostat.up(6);
     expect(thermostat.getDegrees()).toEqual(25);
+  });
+
+  // if power saving mode is off, the maximum temperature is 32 degrees
+
+  it("should have a max temp of 32 degrees if power saving mode is off", function(){
+    thermostat.switchPowerSaving();
+    thermostat.up(13);
+    expect(thermostat.getDegrees()).toEqual(32);
   });
 
 });
