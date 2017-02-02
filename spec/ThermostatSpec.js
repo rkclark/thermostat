@@ -58,4 +58,12 @@ describe('Thermostat', function() {
     });
   });
 
+  describe("#reset", function(){
+    it("You can reset the temperature to 20 with a reset function", function(){
+      thermostat.up(3);
+      thermostat.reset();
+      expect(thermostat.getDegrees()).toEqual(20);
+    });
+  });
+
 });

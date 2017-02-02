@@ -48,4 +48,18 @@ describe('Features', function() {
     expect(thermostat.getDegrees()).toEqual(32);
   });
 
+  // Power saving mode is on by default
+
+  it("Power saving mode is on by default", function(){
+    expect(thermostat._powerSaving).toBe(true);
+  });
+
+  // You can reset the temperature to 20 with a reset function
+
+  it("You can reset the temperature to 20 with a reset function", function(){
+    thermostat.up(3);
+    thermostat.reset();
+    expect(thermostat.getDegrees()).toEqual(20);
+  });
+
 });
