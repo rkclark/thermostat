@@ -24,6 +24,7 @@ $( document ).ready(function() {
 
     $( "#switch-mode" ).click(function() {
       thermostat.switchPowerSaving();
+      $("#power-savings-indicator").toggleClass("indicator-bkgrnd");
       if ((thermostat.getDegrees() > 25) && thermostat.getInPoweringSaving()) {
         thermostat.up(1);
         changeValue(thermostat.getDegrees());
