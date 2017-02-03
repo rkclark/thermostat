@@ -1,5 +1,34 @@
+$background-col: #222222;
+$btn-bkgrnd-col: lighten( $background-col, 5%);
+$btn-hover-bkgrnd-col: lighten( $background-col, 15%);
+$btn-hover-border: lighten( $background-col, 25%);
+$font-col: #eaf4fb;
+$main-tint: #eaf4fb;
+
 html, body, #main-wrapper {
   height: 100%;
+}
+
+body, .btn {
+  background-color: $background-col;
+  color: $font-col;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+.btn {
+  background-color: $btn-bkgrnd-col;
+  border: 2px solid transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+  &:hover {
+    background-color: $btn-hover-bkgrnd-col;
+    border: 2px solid $btn-hover-border;
+    transition: 1s ease;
+  }
 }
 
 progress {

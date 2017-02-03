@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Thermostat app">
-    <link rel="icon" href="">
 
     <title>Thermostat</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <div class="d-flex justify-content-center align-items-center" id="main-wrapper">
 
-      <div id="thermostat-wrapper">
+      <div id="thermostat-wrapper" class="text-center">
+        <h1 class="pb-3"><span id="temp-display"></span>&deg;C</h1>
         <div class="" id="thermostat-display">
-          <h1><span id="temp-display"></span> &#8451;</h1>
           <progress id="progress-bar" value="20" max="32"></progress>
         </div>
         <div class="" id="thermostat-controls">
-          <button class="btn" id="temp-up" type="button">Increase Temperature</button>
-          <button class="btn" id="temp-down" type="button">Decrease Temperature</button>
-          <button class="btn" id="temp-reset" type="button">Reset Temperature</button>
+          <button class="btn" id="temp-up" type="button"><strong>+</strong></button>
+          <button class="btn" id="temp-down" type="button"><strong>-</strong></button>
+          <button class="btn" id="temp-reset" type="button">Reset</button>
           <button class="btn" id="switch-mode" type="button">Switch Power Saving Mode</button>
         </div>
       </div>

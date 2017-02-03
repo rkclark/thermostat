@@ -13,7 +13,7 @@ describe('Thermostat', function() {
 
   it('should have a property for power saving', function() {
     expect(thermostat._powerSaving).toBeDefined();
-  })
+  });
 
   describe('#getDegrees', function() {
     it('should have a function getDegrees', function() {
