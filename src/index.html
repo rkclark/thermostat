@@ -23,19 +23,33 @@
           <progress class="mr-2" id="progress-bar" value="20" max="32"></progress>
           <span class="usage-text medium-usage" id="usage-indicator">medium</span>
         </div>
-        <div class="" id="thermostat-controls">
+        <div id="thermostat-controls">
           <button class="btn" id="temp-up" type="button"><strong>+</strong></button>
           <button class="btn" id="temp-down" type="button"><strong>-</strong></button>
           <button class="btn" id="temp-reset" type="button">Reset</button>
           <button class="btn" id="switch-mode" type="button">Power Saving Mode  <p class="d-inline-block indicator-bkgrnd" id="power-savings-indicator"></p></button>
         </div>
+        <div>
+          <form id="enter-city" class="form-inline text-center pt-5 justify-content-center" action="index.html" method="post">
+            <div class="form-group">
+              <input class="input-field" id="user-location" type="text" name="user-location" value="Location">
+            </div>
+            <div class="ml-3 form-group">
+              <button class="btn" type="submit" name="submit-location" id="submit-location">Enter</button>
+            </div>
+          </form>
+          <div>
+            <p class="pt-5 hidden"><span id="local-temp"></span>&deg;C</p>
+          </div>
+        </div>
       </div>
+
 
 
       <footer id="footer" class="footer py-2 px-3">
       </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 

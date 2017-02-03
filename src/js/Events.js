@@ -38,4 +38,13 @@ $( document ).ready(function() {
         changeUsageText(thermostat.seeEnergyUsage());
       }
     });
+
+    $("#enter-city").submit(function(){
+      event.preventDefault();
+      var city = $("#user-location").val();
+      $("#enter-city").addClass("hidden");
+      $.get("http://api.openweathermap.org/data/2.5/weather?q="+city+",uk&appid=9414ea80d47c1479b6d06ffc6e002d0f&units=metric", function(data){
+        $("#local-temp").text(data.name+": "+data.main.temp).parent().toggleClass("hidden");
+      });
+    });
 });

@@ -4,7 +4,7 @@ html, body, #main-wrapper {
 #thermostat-wrapper {
   width: 60%; }
 
-body, .btn {
+body, .btn, .input-field {
   background-color: #222222;
   color: #eaf4fb;
   font-family: 'Titillium Web', sans-serif; }
@@ -12,17 +12,25 @@ body, .btn {
 h1 {
   font-size: 3.5rem; }
 
-.btn {
+.btn, .input-field {
   background-color: #2f2f2f;
   border: 2px solid transparent;
   font-size: 1.1rem;
   cursor: pointer; }
-  .btn:hover {
+  .btn:hover, .btn:active, .input-field:hover, .input-field:active {
     background-color: #484848;
     border: 2px solid #626262;
     transition: 1s ease; }
-  .btn:focus {
-    box-shadow: none; }
+  .btn:focus, .input-field:focus {
+    box-shadow: none;
+    outline: none; }
+
+.input-field:focus {
+  background-color: #484848;
+  border: 2px solid #626262; }
+
+.hidden {
+  display: none; }
 
 progress {
   -webkit-appearance: none;

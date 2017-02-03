@@ -17,7 +17,7 @@ html, body, #main-wrapper {
   width: 60%;
 }
 
-body, .btn {
+body, .btn , .input-field {
   background-color: $background-col;
   color: $font-col;
   font-family: 'Titillium Web', sans-serif;
@@ -27,19 +27,31 @@ h1 {
   font-size: 3.5rem;
 }
 
-.btn {
+.btn, .input-field {
   background-color: $btn-bkgrnd-col;
   border: 2px solid transparent;
   font-size: 1.1rem;
   cursor: pointer;
-  &:hover {
+  &:hover, &:active {
     background-color: $btn-hover-bkgrnd-col;
     border: 2px solid $btn-hover-border;
     transition: 1s ease;
   }
   &:focus{
     box-shadow: none;
+    outline: none;
   }
+}
+
+.input-field {
+  &:focus {
+    background-color: $btn-hover-bkgrnd-col;
+    border: 2px solid $btn-hover-border;
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 progress {
