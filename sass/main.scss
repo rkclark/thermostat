@@ -2,8 +2,12 @@ $background-col: #222222;
 $btn-bkgrnd-col: lighten( $background-col, 5%);
 $btn-hover-bkgrnd-col: lighten( $background-col, 15%);
 $btn-hover-border: lighten( $background-col, 25%);
+$thermo-border: lighten( $background-col, 40%);
 $font-col: #eaf4fb;
 $main-tint: #eaf4fb;
+$low-usage: #6d40dd;
+$med-usage: #a220c8;
+$high-usage: #e236d1;
 
 html, body, #main-wrapper {
   height: 100%;
@@ -39,8 +43,28 @@ h1 {
 }
 
 progress {
-  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 95%;
   height: 2em;
+}
+
+progress::-webkit-progress-bar {
+  background-color: inherit;
+  border-left: 0.5px solid $thermo-border;
+  border-right: 0.5px solid $thermo-border;
+}
+
+progress::-webkit-progress-value {
+  background-color: $main-tint;
+  transition: 0.5s ease;
+}
+
+.usage-text {
+  line-height: 2.4;
+  font-size: 0.9rem;
+  width: 5%;
+  transition: 2s ease;
 }
 
 #power-savings-indicator {
@@ -55,3 +79,15 @@ progress {
 .indicator-bkgrnd {
   background-color: $main-tint;
 }
+
+.low-usage {
+  color: $low-usage;
+}
+
+.medium-usage {
+  color: $med-usage;
+}
+
+.high-usage {
+  color: $high-usage;
+};

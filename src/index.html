@@ -19,14 +19,15 @@
 
       <div id="thermostat-wrapper" class="text-center">
         <h1 class="pb-3"><span id="temp-display"></span>&deg;C</h1>
-        <div class="" id="thermostat-display">
-          <progress id="progress-bar" value="20" max="32"></progress>
+        <div class="pb-3 d-flex justify-content-center">
+          <progress class="mr-2" id="progress-bar" value="20" max="32"></progress>
+          <span class="usage-text medium-usage" id="usage-indicator">medium</span>
         </div>
         <div class="" id="thermostat-controls">
           <button class="btn" id="temp-up" type="button"><strong>+</strong></button>
           <button class="btn" id="temp-down" type="button"><strong>-</strong></button>
           <button class="btn" id="temp-reset" type="button">Reset</button>
-          <button class="btn" id="switch-mode" type="button">Power Saving Mode  <p class="d-inline-block" id="power-savings-indicator"></p></button>
+          <button class="btn" id="switch-mode" type="button">Power Saving Mode  <p class="d-inline-block indicator-bkgrnd" id="power-savings-indicator"></p></button>
         </div>
       </div>
 
